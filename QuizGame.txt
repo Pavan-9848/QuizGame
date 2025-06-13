@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class QuizGame {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int score = 0;
+
+        System.out.println("----- Welcome to the Quiz Game -----");
+
+        // Question 1
+        System.out.println("\n1. What is the capital of India?");
+        System.out.println("a) Mumbai");
+        System.out.println("b) New Delhi");
+        System.out.println("c) Chennai");
+        System.out.print("Your answer: ");
+        String answer1 = sc.nextLine();
+        if (answer1.equalsIgnoreCase("b")) {
+            score++;
+        }
+
+        // Question 2
+        System.out.println("\n2. Which planet is known as the Red Planet?");
+        System.out.println("a) Mars");
+        System.out.println("b) Jupiter");
+        System.out.println("c) Saturn");
+        System.out.print("Your answer: ");
+        String answer2 = sc.nextLine();
+        if (answer2.equalsIgnoreCase("a")) {
+            score++;
+        }
+
+        // Question 3
+        System.out.println("\n3. Who wrote 'Romeo and Juliet'?");
+        System.out.println("a) Charles Dickens");
+        System.out.println("b) William Shakespeare");
+        System.out.println("c) Mark Twain");
+        System.out.print("Your answer: ");
+        String answer3 = sc.nextLine();
+        if (answer3.equalsIgnoreCase("b")) {
+            score++;
+        }
+
+        // Final Result
+        System.out.println("\n----- Quiz Over -----");
+        System.out.println("Your score: " + score + "/3");
+
+        if (score == 3) {
+            System.out.println("Excellent! 🎉");
+        } else if (score == 2) {
+            System.out.println("Good job! 👍");
+        } else {
+            System.out.println("Keep learning! 📚");
+        }
+
+        sc.close();
+    }
+}
